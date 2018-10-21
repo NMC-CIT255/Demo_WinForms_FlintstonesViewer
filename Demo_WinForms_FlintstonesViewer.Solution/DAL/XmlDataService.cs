@@ -13,6 +13,10 @@ namespace Demo_WinForms_FlintstonesViewer
     {
         private string _dataFilePath;
 
+        /// <summary>
+        /// read the xml file and load a list of character objects
+        /// </summary>
+        /// <returns>list of characters</returns>
         public List<Character> ReadAll()
         {
             List<Character> characters = new List<Character>();
@@ -35,6 +39,10 @@ namespace Demo_WinForms_FlintstonesViewer
             return characters;
         }
 
+        /// <summary>
+        /// write the current list of characters to the xml data file
+        /// </summary>
+        /// <param name="characters">list of characters</param>
         public void WriteAll(List<Character> characters)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<Character>), new XmlRootAttribute("Characters"));

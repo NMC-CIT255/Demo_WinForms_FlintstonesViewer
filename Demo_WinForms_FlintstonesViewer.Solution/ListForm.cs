@@ -89,7 +89,7 @@ namespace Demo_WinForms_FlintstonesViewer
             }
             catch (Exception)
             {
-
+                MessageBox.Show("Unable to save current data.\nExiting the application.");
                 throw;
             }
             this.Close();
