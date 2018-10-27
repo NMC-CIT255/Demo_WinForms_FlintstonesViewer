@@ -95,5 +95,34 @@ namespace Demo_WinForms_FlintstonesViewer
             this.Close();
 
         }
+
+        private void btn_DemoSortFilterSearch_Click(object sender, EventArgs e)
+        {
+            //
+            // Note: These examples represent a quick way to "refresh" the DataGridView.
+            //       Using an ObservableCollection and implementing the INotifyPropertyChanged interface
+            //       is a stronger pattern.
+            //
+
+            //
+            // sort list by age and reset the DataSource
+            //
+            var sortedList = _characters.OrderBy(c => c.Age).ToList();
+            dataGridView_Characters.DataSource = sortedList;
+
+            //
+            // filter list by gender and reset the DataSource
+            //
+            //var filteredList = _characters.Where(c => c.Gender == Character.GenderType.Male).ToList();
+            //dataGridView_Characters.DataSource = filteredList;
+
+            //
+            // search list and reset the DataSource
+            // note: searchTerm and LastName are converted to upper case for comparison
+            //
+            //string searchTerm = "Rubble";
+            //var searchedList = _characters.Where(c => c.LastName.ToUpper().Contains(searchTerm.ToUpper())).ToList();
+            //dataGridView_Characters.DataSource = searchedList;
+        }
     }
 }

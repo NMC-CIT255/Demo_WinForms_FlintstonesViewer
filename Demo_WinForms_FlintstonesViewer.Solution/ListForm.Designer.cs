@@ -33,6 +33,7 @@
             this.btn_DetailView = new System.Windows.Forms.Button();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_DemoSortFilterSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Characters)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +86,22 @@
             this.btn_exit.UseVisualStyleBackColor = true;
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
+            // btn_DemoSortFilterSearch
+            // 
+            this.btn_DemoSortFilterSearch.Location = new System.Drawing.Point(292, 314);
+            this.btn_DemoSortFilterSearch.Name = "btn_DemoSortFilterSearch";
+            this.btn_DemoSortFilterSearch.Size = new System.Drawing.Size(108, 48);
+            this.btn_DemoSortFilterSearch.TabIndex = 5;
+            this.btn_DemoSortFilterSearch.Text = "Demo Sort, Filter, Search";
+            this.btn_DemoSortFilterSearch.UseVisualStyleBackColor = true;
+            this.btn_DemoSortFilterSearch.Click += new System.EventHandler(this.btn_DemoSortFilterSearch_Click);
+            // 
             // ListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 386);
+            this.Controls.Add(this.btn_DemoSortFilterSearch);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.btn_DetailView);
@@ -111,6 +123,7 @@
         private System.Windows.Forms.Button btn_DetailView;
         private System.Windows.Forms.Label lbl_Title;
         private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_DemoSortFilterSearch;
     }
 }
 
